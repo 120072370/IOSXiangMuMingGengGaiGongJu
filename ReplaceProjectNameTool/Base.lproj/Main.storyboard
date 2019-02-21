@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="项目名替换工具" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="项目名替换工具" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About ReplaceProjectNameTool" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide ReplaceProjectNameTool" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit ReplaceProjectNameTool" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="窗口" id="aUF-d1-5bR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="窗口" systemMenu="window" id="Td7-aD-5lo">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                                        <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="帮助" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="帮助" systemMenu="help" id="F2S-fz-NVQ">
+                                    <items>
+                                        <menuItem title="ReplaceProjectNameTool Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                            <connections>
+                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="IOS项目更名工具" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="566" height="232"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="231"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="Y6H-R4-wIm">
+            <objects>
+                <windowController storyboardIdentifier="LogWindowController" id="Tq0-l3-nCW" customClass="LogWindowController" sceneMemberID="viewController">
+                    <window key="window" title="替换日志" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="2up-a9-m33">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="Tq0-l3-nCW" id="Gt4-Y7-4Xj"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="sMU-ED-fpg" kind="relationship" relationship="window.shadowedContentViewController" id="9XS-jo-Cp6"/>
+                    </connections>
+                </windowController>
+                <customObject id="UlT-iB-vFt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="175"/>
+        </scene>
+        <!--Log View Controller-->
+        <scene sceneID="v7K-Ls-DF5">
+            <objects>
+                <viewController storyboardIdentifier="LogViewController" id="sMU-ED-fpg" customClass="LogViewController" sceneMemberID="viewController">
+                    <view key="view" id="7qO-Wb-fWh">
+                        <rect key="frame" x="0.0" y="0.0" width="813" height="388"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xgx-vq-sTj">
+                                <rect key="frame" x="704" y="20" width="89" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="p09-6e-rWU"/>
+                                    <constraint firstAttribute="height" constant="54" id="ziM-yY-jSQ"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="关闭" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7qZ-K7-uTU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closeBtnAction:" target="sMU-ED-fpg" id="Y0b-hk-LfR"/>
+                                </connections>
+                            </button>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hb-Yc-Jnw">
+                                <rect key="frame" x="20" y="98" width="773" height="270"/>
+                                <clipView key="contentView" id="s2p-tx-Flt">
+                                    <rect key="frame" x="1" y="1" width="756" height="268"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="mYZ-nY-S75">
+                                            <rect key="frame" x="0.0" y="0.0" width="756" height="268"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="756" height="268"/>
+                                            <size key="maxSize" width="758" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="Ia5-yc-sBO"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="uBv-2j-mSu">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="1OV-5A-ObS">
+                                    <rect key="frame" x="757" y="1" width="15" height="268"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2hb-Yc-Jnw" firstAttribute="leading" secondItem="7qO-Wb-fWh" secondAttribute="leading" constant="20" id="6pw-1W-gLx"/>
+                            <constraint firstItem="xgx-vq-sTj" firstAttribute="trailing" secondItem="2hb-Yc-Jnw" secondAttribute="trailing" id="As1-Nv-187"/>
+                            <constraint firstAttribute="bottom" secondItem="xgx-vq-sTj" secondAttribute="bottom" constant="20" symbolic="YES" id="Bj7-CZ-Hpa"/>
+                            <constraint firstItem="2hb-Yc-Jnw" firstAttribute="top" secondItem="7qO-Wb-fWh" secondAttribute="top" constant="20" id="EWF-Y1-r8D"/>
+                            <constraint firstAttribute="trailing" secondItem="2hb-Yc-Jnw" secondAttribute="trailing" constant="20" id="esU-zm-WFP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="mYZ-nY-S75" id="O8t-e4-SE7"/>
+                    </connections>
+                </viewController>
+                <customObject id="58o-NT-VfS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032" y="709"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="757" height="391"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XFn-Iv-DaZ">
+                                <rect key="frame" x="617" y="20" width="120" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="5kH-WT-PI4"/>
+                                    <constraint firstAttribute="width" constant="120" id="emf-27-Nfi"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="开始替换" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="KZI-W5-RNa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="replaceBtnAction:" target="XfG-lQ-9wD" id="c03-Ug-Vxb"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXp-gb-kw6">
+                                <rect key="frame" x="18" y="352" width="81" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="项目根目录" id="K4f-7r-LYG">
+                                    <font key="font" size="15" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" red="0.23137254900000001" green="0.23529411759999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rC9-Ye-xe5">
+                                <rect key="frame" x="33" y="308" width="66" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="旧项目名" id="TXo-jp-T2h">
+                                    <font key="font" size="15" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" red="0.23137254900000001" green="0.23529411759999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wu-4D-N3c">
+                                <rect key="frame" x="33" y="264" width="66" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="新项目名" id="UfH-qR-3Q3">
+                                    <font key="font" size="15" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" red="0.23137254900000001" green="0.23529411759999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyt-ti-pal">
+                                <rect key="frame" x="105" y="309" width="71" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="尚未读取到" id="FRJ-8Y-yWE">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5do-8z-ynl">
+                                <rect key="frame" x="107" y="351" width="630" height="22"/>
+                                <gestureRecognizers>
+                                    <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="1" id="x4D-m7-Za0">
+                                        <connections>
+                                            <action selector="selectSavePathAction:" target="XfG-lQ-9wD" id="jFw-bh-SMP"/>
+                                        </connections>
+                                    </clickGestureRecognizer>
+                                </gestureRecognizers>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="点击选择项目路径" bezelStyle="round" id="FWq-4B-Fxc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EZD-9O-5mo">
+                                <rect key="frame" x="107" y="263" width="630" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="输入新的项目名,这一项不输入的话，不进项项目名替换" bezelStyle="round" id="3xc-TO-eyk">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="USV-Vs-ccP">
+                                <rect key="frame" x="33" y="220" width="66" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="旧前缀名" id="LjR-vL-V4v">
+                                    <font key="font" size="15" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" red="0.23137254900000001" green="0.23529411759999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5C-Da-bln">
+                                <rect key="frame" x="33" y="176" width="66" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="新前缀名" id="rsX-NW-5bQ">
+                                    <font key="font" size="15" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" red="0.23137254900000001" green="0.23529411759999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mgH-Qx-Z8f">
+                                <rect key="frame" x="107" y="219" width="630" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="输入旧的前缀名，如果没有不要填写任何字符" bezelStyle="round" id="fX9-Tg-Ccq">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XM1-uH-ahz">
+                                <rect key="frame" x="107" y="175" width="630" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="⚠️输入新的前缀名，如果清空前缀的话，这一项不需要填写任何字符" bezelStyle="round" id="iw4-Kg-e4a">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.93333333330000001" green="0.0" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XFn-Iv-DaZ" secondAttribute="bottom" constant="20" id="1wU-Q3-lTh"/>
+                            <constraint firstItem="XFn-Iv-DaZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="4AP-l4-GY3"/>
+                            <constraint firstAttribute="trailing" secondItem="5do-8z-ynl" secondAttribute="trailing" constant="20" id="4De-uI-IWt"/>
+                            <constraint firstItem="USV-Vs-ccP" firstAttribute="top" secondItem="0wu-4D-N3c" secondAttribute="bottom" constant="25" id="5Zn-Xo-bpj"/>
+                            <constraint firstItem="EZD-9O-5mo" firstAttribute="leading" secondItem="0wu-4D-N3c" secondAttribute="trailing" constant="10" id="6Xi-LZ-Phl"/>
+                            <constraint firstItem="XM1-uH-ahz" firstAttribute="leading" secondItem="k5C-Da-bln" secondAttribute="trailing" constant="10" id="8gH-F9-C14"/>
+                            <constraint firstItem="mgH-Qx-Z8f" firstAttribute="leading" secondItem="USV-Vs-ccP" secondAttribute="trailing" constant="10" id="AY9-qE-I93"/>
+                            <constraint firstItem="rC9-Ye-xe5" firstAttribute="top" secondItem="zXp-gb-kw6" secondAttribute="bottom" constant="25" id="Ak6-4Q-212"/>
+                            <constraint firstItem="XM1-uH-ahz" firstAttribute="centerY" secondItem="k5C-Da-bln" secondAttribute="centerY" id="Ci7-aC-G16"/>
+                            <constraint firstItem="k5C-Da-bln" firstAttribute="trailing" secondItem="USV-Vs-ccP" secondAttribute="trailing" id="DWs-I2-fg9"/>
+                            <constraint firstAttribute="trailing" secondItem="mgH-Qx-Z8f" secondAttribute="trailing" constant="20" id="G5i-01-1IE"/>
+                            <constraint firstItem="USV-Vs-ccP" firstAttribute="trailing" secondItem="0wu-4D-N3c" secondAttribute="trailing" id="N1B-DX-gAE"/>
+                            <constraint firstAttribute="trailing" secondItem="EZD-9O-5mo" secondAttribute="trailing" constant="20" id="RkQ-bd-eNZ"/>
+                            <constraint firstAttribute="trailing" secondItem="XM1-uH-ahz" secondAttribute="trailing" constant="20" id="Rlt-TQ-vSQ"/>
+                            <constraint firstItem="mgH-Qx-Z8f" firstAttribute="centerY" secondItem="USV-Vs-ccP" secondAttribute="centerY" id="Yv0-oN-79D"/>
+                            <constraint firstItem="0wu-4D-N3c" firstAttribute="trailing" secondItem="rC9-Ye-xe5" secondAttribute="trailing" id="Zd3-OO-VUs"/>
+                            <constraint firstItem="hyt-ti-pal" firstAttribute="leading" secondItem="rC9-Ye-xe5" secondAttribute="trailing" constant="10" id="cD7-Yp-7OB"/>
+                            <constraint firstItem="hyt-ti-pal" firstAttribute="centerY" secondItem="rC9-Ye-xe5" secondAttribute="centerY" id="dsB-Uf-b8d"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zXp-gb-kw6" secondAttribute="trailing" constant="20" symbolic="YES" id="j5P-fs-Xs7"/>
+                            <constraint firstAttribute="trailing" secondItem="XFn-Iv-DaZ" secondAttribute="trailing" constant="20" id="lbR-IK-iAv"/>
+                            <constraint firstItem="rC9-Ye-xe5" firstAttribute="trailing" secondItem="zXp-gb-kw6" secondAttribute="trailing" id="o5b-cO-HRw"/>
+                            <constraint firstItem="5do-8z-ynl" firstAttribute="leading" secondItem="zXp-gb-kw6" secondAttribute="trailing" constant="10" id="pDc-lr-kvb"/>
+                            <constraint firstItem="zXp-gb-kw6" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="pYS-pX-NlO"/>
+                            <constraint firstItem="EZD-9O-5mo" firstAttribute="centerY" secondItem="0wu-4D-N3c" secondAttribute="centerY" id="r6d-St-wtC"/>
+                            <constraint firstItem="zXp-gb-kw6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="ufP-5e-mj8"/>
+                            <constraint firstItem="k5C-Da-bln" firstAttribute="top" secondItem="USV-Vs-ccP" secondAttribute="bottom" constant="25" id="z5o-TV-e4T"/>
+                            <constraint firstItem="5do-8z-ynl" firstAttribute="centerY" secondItem="zXp-gb-kw6" secondAttribute="centerY" id="zME-s0-JB8"/>
+                            <constraint firstItem="0wu-4D-N3c" firstAttribute="top" secondItem="rC9-Ye-xe5" secondAttribute="bottom" constant="25" id="znn-zH-MnG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currPrefixTextField" destination="XM1-uH-ahz" id="bIO-Jh-luQ"/>
+                        <outlet property="currProjectNameTextField" destination="EZD-9O-5mo" id="2mQ-1W-v5E"/>
+                        <outlet property="oldPrefixTextField" destination="mgH-Qx-Z8f" id="u4H-Ab-EL9"/>
+                        <outlet property="oldProjectNameTextField" destination="hyt-ti-pal" id="rhC-gV-xq8"/>
+                        <outlet property="pathTextField" destination="5do-8z-ynl" id="5pQ-DP-TXF"/>
+                        <outlet property="replaceBtn" destination="XFn-Iv-DaZ" id="dKL-3L-bMa"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="711"/>
+        </scene>
+    </scenes>
+</document>
